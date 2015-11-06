@@ -6,6 +6,7 @@
 package message;
 
 import java.io.Serializable;
+import java.util.Date;
 
 /**
  *
@@ -14,13 +15,17 @@ import java.io.Serializable;
 public class ASTicket implements Serializable{
     
     public String clientID;
-    public String ticketTimeStamp;
+    public Date ticketTimeStamp;
     public String sessionKey;
+    public String serviceID;
+    public String randomNumber;
 
-    public ASTicket(String clientID, String ticketTimeStamp, String sessionKey) {
+    public ASTicket(String clientID, Date ticketTimeStamp, String sessionKey, String serviceID, String randomNumber) {
         this.clientID = clientID;
         this.ticketTimeStamp = ticketTimeStamp;
         this.sessionKey = sessionKey;
+        this.serviceID = serviceID;
+        this.randomNumber = randomNumber;
     }
     
     public void print(){
@@ -28,6 +33,8 @@ public class ASTicket implements Serializable{
         System.out.println("ID do cliente: " + clientID);
         System.out.println("Ticket timestamp: " + ticketTimeStamp);
         System.out.println("Chave de sessão: " + sessionKey);
+        System.out.println("ID do serviço: " + serviceID);
+        System.out.println("Número aleatorio: " + randomNumber);
     }
     
 }
