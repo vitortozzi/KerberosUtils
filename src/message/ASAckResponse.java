@@ -12,7 +12,7 @@ import java.util.Date;
  *
  * @author Vitor Tozzi
  */
-public class ASAckResponse implements Serializable{
+public class ASAckResponse extends Mensagem implements Serializable{
     
     public String sessionKey;
     public String randomNumber;
