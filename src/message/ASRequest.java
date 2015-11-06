@@ -6,6 +6,7 @@
 package message;
 
 import java.io.Serializable;
+import java.util.Date;
 
 /**
  *
@@ -15,12 +16,12 @@ public class ASRequest implements Serializable{
     
     public String clientID;
     public String serviceID;
-    public String timeStamp;
+    public Date timeStamp;
     public String randomNumber;
     
-    ClientRequest clientRequest;
+    public ClientRequest clientRequest;
 
-    public ASRequest(String clientID, String serviceID, String timeStamp, String randomNumber) {
+    public ASRequest(String clientID, String serviceID, Date timeStamp, String randomNumber) {
         this.clientID = clientID;
         clientRequest = new ClientRequest(serviceID, timeStamp, randomNumber);
     }

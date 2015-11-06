@@ -5,10 +5,12 @@
  */
 package message;
 
+import java.io.Serializable;
+
 /**
  *
  * @author Vitor Tozzi
  */
-public abstract class Mensagem {
+public abstract class Mensagem implements Serializable{
     
 }

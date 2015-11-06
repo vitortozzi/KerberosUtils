@@ -5,17 +5,20 @@
  */
 package message;
 
+import java.io.Serializable;
+import java.util.Date;
+
 /**
  *
  * @author Vitor Tozzi
  */
-public class ClientRequest extends Mensagem{
+public class ClientRequest extends Mensagem implements Serializable{
 
     public String serviceID;
-    public String timestamp;
+    public Date timestamp;
     public String randomNumber;
 
-    public ClientRequest(String serviceID, String timestamp, String randomNumber) {
+    public ClientRequest(String serviceID, Date timestamp, String randomNumber) {
         this.serviceID = serviceID;
         this.timestamp = timestamp;
         this.randomNumber = randomNumber;
@@ -24,7 +27,7 @@ public class ClientRequest extends Mensagem{
     public void print(){
         System.out.println("Client Request");
         System.out.println("ID do serviço: " + serviceID);
-        System.out.println("Timestamp: " + timestamp);
+        System.out.println("Timestamp: " + timestamp.toString());
         System.out.println("Número aleatório: " + randomNumber);
     }
 }
