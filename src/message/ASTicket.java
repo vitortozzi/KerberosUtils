@@ -12,7 +12,7 @@ import java.util.Date;
  *
  * @author Vitor Tozzi
  */
-public class ASTicket implements Serializable{
+public class ASTicket extends Mensagem implements Serializable{
     
     public String clientID;
     public Date ticketTimeStamp;

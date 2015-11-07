@@ -12,26 +12,26 @@ import java.util.Date;
  *
  * @author Vitor Tozzi
  */
-public class TGSRequest extends Mensagem implements Serializable{
+public class ServerTicket extends Mensagem implements Serializable{
     
     public String clientID;
-    public String serviceID;
     public Date timestamp;
-    public String randomNumber;
+    public String serviceID;
+    public String sessionKey;
 
-    public TGSRequest(String clientID, String serviceID, Date timestamp, String randomNumber) {
+    public ServerTicket(String clientID, Date timestamp, String serviceID, String sessionKey) {
         this.clientID = clientID;
-        this.serviceID = serviceID;
         this.timestamp = timestamp;
-        this.randomNumber = randomNumber;
+        this.serviceID = serviceID;
+        this.sessionKey = sessionKey;
     }
     
     public void print(){
-        System.out.println("*Ticket*");
+        System.out.println("*Server Ticket*");
         System.out.println("ID do cliente: " + clientID);
         System.out.println("ID do serviço: " + serviceID);
         System.out.println("Timestamp: " + timestamp.toString());
-        System.out.println("Número aleatório: " + randomNumber);
+        System.out.println("Chave de sessão: " + sessionKey);
     }
     
 }

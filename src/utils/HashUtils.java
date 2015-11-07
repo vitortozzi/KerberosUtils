@@ -20,6 +20,7 @@ public class HashUtils {
         MessageDigest md = MessageDigest.getInstance("MD5");
         BigInteger hash = new BigInteger(1, md.digest(s1.getBytes()));
         String s2 = hash.toString(16);
+        s2 = s2.substring(0, 8);
         return s2;
     }
 
