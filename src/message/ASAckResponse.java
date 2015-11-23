@@ -26,6 +26,7 @@ public class ASAckResponse extends Mensagem implements Serializable{
         this.serviceID = serviceID;
     }
     
+    @Override
     public void print(){
         System.out.println("*AS ACK Response*");
         System.out.println("Chave de sessão: " + sessionKey);

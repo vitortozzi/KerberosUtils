@@ -21,6 +21,9 @@ public class ASResponse implements Serializable{
         this.aSTicket = aSTicket;
     }
  
+    /**
+     *
+     */
     public void print(){
         System.out.println("AS Responde");
         aSAckResponse.print();

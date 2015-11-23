@@ -12,7 +12,7 @@ import java.util.Date;
  *
  * @author Vitor Tozzi
  */
-public class ASRequest implements Serializable{
+public class ASRequest extends Mensagem implements Serializable{
     
     public String clientID;
     public String serviceID;
@@ -26,6 +26,7 @@ public class ASRequest implements Serializable{
         clientRequest = new ClientRequest(serviceID, timeStamp, randomNumber);
     }
     
+    @Override
     public void print(){
         System.out.println("AS Request");
         System.out.println("ID do cliente: " + clientID);

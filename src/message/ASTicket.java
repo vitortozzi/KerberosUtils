@@ -28,6 +28,7 @@ public class ASTicket extends Mensagem implements Serializable{
         this.randomNumber = randomNumber;
     }
     
+    @Override
     public void print(){
         System.out.println("*AS Ticket*");
         System.out.println("ID do cliente: " + clientID);

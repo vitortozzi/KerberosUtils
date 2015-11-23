@@ -26,6 +26,7 @@ public class TGSRequest extends Mensagem implements Serializable{
         this.randomNumber = randomNumber;
     }
     
+    @Override
     public void print(){
         System.out.println("*Ticket*");
         System.out.println("ID do cliente: " + clientID);

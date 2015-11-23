@@ -13,4 +13,6 @@ import java.io.Serializable;
  */
 public abstract class Mensagem implements Serializable{
     
+    public abstract void print();
+    
 }

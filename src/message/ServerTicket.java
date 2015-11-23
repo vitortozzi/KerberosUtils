@@ -26,6 +26,7 @@ public class ServerTicket extends Mensagem implements Serializable{
         this.sessionKey = sessionKey;
     }
     
+    @Override
     public void print(){
         System.out.println("*Server Ticket*");
         System.out.println("ID do cliente: " + clientID);
