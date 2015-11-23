@@ -33,7 +33,7 @@ public class TimeUtils {
     
     public static boolean checkValidTimestamp(Date data){
         
-        Date dataAtual = addHours(getDate(), 24);
+        Date dataAtual = addHours(getDate(), 0);
         return data.after(dataAtual);
         
     }

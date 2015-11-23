@@ -15,9 +15,6 @@ import java.util.Date;
 public class ASRequest extends Mensagem implements Serializable{
     
     public String clientID;
-    public String serviceID;
-    public Date timeStamp;
-    public String randomNumber;
     
     public ClientRequest clientRequest;
 
