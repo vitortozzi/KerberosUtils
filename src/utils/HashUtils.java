@@ -23,5 +23,15 @@ public class HashUtils {
         s2 = s2.substring(0, 8);
         return s2;
     }
+    
+    public static String getHash(String mensagem) throws NoSuchAlgorithmException{
+        
+        MessageDigest md = MessageDigest.getInstance("MD5");
+        BigInteger hash = new BigInteger(1, md.digest(mensagem.getBytes()));
+        String s2 = hash.toString(16);
+        s2 = s2.substring(0, 8);
+        return s2;
+        
+    }
 
 }
